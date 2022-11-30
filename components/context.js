@@ -65,7 +65,7 @@ const Provider = ({ children }) => {
       price += item.price * item.quantity;
     });
 
-    return price;
+    return (Math.round(price * 100) / 100).toFixed(2);
   };
 
   const getCountQuantity = (product) => {
